@@ -1,16 +1,20 @@
 <template>
-  <div id="app">
+  <div>
     <router-view/>
+    <publicFooter></publicFooter>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'app'
-}
+  import publicFooter from './components/common/footer.vue';
+  export default {
+    name: 'app',
+    components:{publicFooter}
+  }
 </script>
 
 <style>
+  @import 'asset/css/common.css';
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -20,3 +24,4 @@ export default {
   margin-top: 60px;
 }
 </style>
+

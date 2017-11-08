@@ -1,5 +1,8 @@
 <template>
-    <div>首页</div>
+    <div>
+      首页
+
+    </div>
 
 </template>
 
@@ -8,10 +11,9 @@
 </style>
 
 <script>
-export default{
-  name:'home'
-}
+  export default{
+    name:'home',
 
 
-
+  }
 </script>
