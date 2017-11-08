@@ -1,5 +1,8 @@
 <template>
-<div>订单中心</div>
+<div>
+
+  订单中心
+</div>
 </template>
 
 <style>

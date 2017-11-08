@@ -28,7 +28,7 @@
       <!--</li>-->
     <!--</router-link>-->
     <router-link v-for="(item,index) in navList" :key="index" :to="item.url">
-      <li class="footer-item" :class="[item.className,{cur:item.active}]">
+      <li class="footer-item" :class="[item.className,{cur:item.navType==curNavType}]" @click="clickNav(item)">
         <span></span>
         <p>首页</p>
       </li>
@@ -107,17 +107,25 @@
     data(){
       return {
         navList: [
-          {url: '/', title: '首页', className: 'home', active: true},
-          {url: '/category', title: '分类', className: 'category', active: false},
-          {url: '/vipGuide', title: 'VIP', className: 'vip', active: false},
-          {url: '/orderCenter', title: '订单中心', className: 'orderCenter', active: false}
+          {url: '/', title: '首页', className: 'home', navType:0},
+          {url: '/category', title: '分类', className: 'category', navType: 1},
+          {url: '/vipGuide', title: 'VIP', className: 'vip', navType: 2},
+          {url: '/orderCenter', title: '订单中心', className: 'orderCenter', navType: 3}
         ]
+      }
+    },
+    computed: {
+      curNavType(){
+        return 0;
       }
     },
     created(){
 
     },
-    computed: {},
-    methods: {}
+    methods: {
+      clickNav(item){
+        console.log(item.navType);
+      }
+    }
   }
 </script>

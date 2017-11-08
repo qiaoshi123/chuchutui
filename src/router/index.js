@@ -24,7 +24,7 @@ export default new Router({
       component: VipGuide
     },
     {
-      path: '/vipGuide',
+      path: '/orderCenter',
       name: 'orderCenter',
       component: OrderCenter
     },
