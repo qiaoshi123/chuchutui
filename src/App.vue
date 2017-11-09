@@ -1,15 +1,19 @@
 <template>
   <div>
     <router-view/>
-    <publicFooter></publicFooter>
+    <publicFooter v-show="showFooterNav"></publicFooter>
   </div>
 </template>
 
 <script>
   import publicFooter from './components/common/footer.vue';
+  import { mapState, mapActions,mapMutations } from 'vuex'
   export default {
     name: 'app',
-    components:{publicFooter}
+    components:{publicFooter},
+    computed:{
+      ...mapState(['showFooterNav'])
+    }
   }
 </script>
 

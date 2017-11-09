@@ -6,27 +6,32 @@ import VipGuide from '@/views/vipGuide'
 import OrderCenter from '@/views/orderCenter'
 Vue.use(Router);
 
-export default new Router({
+var router=new Router({
   routes: [
     {
       path: '/',
       name: 'home',
-      component: Home
+      component: Home,
+      meta: { navShow: true, cname: '一级页面' }
     },
     {
       path: '/category',
       name: 'category',
-      component: Category
+      component: Category,
+      meta: { navShow: true, cname: '一级页面' }
     },
     {
       path: '/vipGuide',
       name: 'vipGuide',
-      component: VipGuide
+      component: VipGuide,
+      meta: { navShow: true, cname: '一级页面' }
     },
     {
       path: '/orderCenter',
       name: 'orderCenter',
-      component: OrderCenter
+      component: OrderCenter,
+      meta: { navShow: true, cname: '一级页面' }
     },
   ]
-})
+});
+export default router

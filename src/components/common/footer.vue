@@ -28,9 +28,9 @@
       <!--</li>-->
     <!--</router-link>-->
     <router-link v-for="(item,index) in navList" :key="index" :to="item.url">
-      <li class="footer-item" :class="[item.className,{cur:item.navType==curNavType}]" @click="clickNav(item)">
+      <li class="footer-item" :class="[item.className,{cur:item.navType==curFooterNavType}]">
         <span></span>
-        <p>首页</p>
+        <p>{{item.title}}</p>
       </li>
     </router-link>
   </ul>
@@ -91,7 +91,7 @@
   }
 
   .public-footer .orderCenter.cur span {
-    background-position: -1.5rem -1.5rem;
+    background-position: -1.5rem -0.5rem;
   }
 
   .public-footer .footer-item p {
@@ -102,6 +102,7 @@
 </style>
 
 <script>
+  import { mapState, mapActions,mapMutations } from 'vuex'
   export default{
     name: 'publicFooter',
     data(){
@@ -115,17 +116,7 @@
       }
     },
     computed: {
-      curNavType(){
-        return 0;
-      }
-    },
-    created(){
-
-    },
-    methods: {
-      clickNav(item){
-        console.log(item.navType);
-      }
+      ...mapState(['curFooterNavType'])
     }
   }
 </script>
