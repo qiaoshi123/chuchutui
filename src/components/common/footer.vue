@@ -3,30 +3,6 @@
 -->
 <template>
   <ul class="public-footer">
-    <!--<router-link to="/">-->
-      <!--<li class="footer-item home cur">-->
-        <!--<span></span>-->
-        <!--<p>首页</p>-->
-      <!--</li>-->
-    <!--</router-link>-->
-    <!--<router-link to="/category">-->
-      <!--<li class="footer-item category">-->
-        <!--<span></span>-->
-        <!--<p>分类</p>-->
-      <!--</li>-->
-    <!--</router-link>-->
-    <!--<router-link to="/vipGuide">-->
-      <!--<li class="footer-item vip">-->
-        <!--<span></span>-->
-        <!--<p>VIP</p>-->
-      <!--</li>-->
-    <!--</router-link>-->
-    <!--<router-link to="/orderCenter">-->
-      <!--<li class="footer-item orderCenter">-->
-        <!--<span></span>-->
-        <!--<p>订单中心</p>-->
-      <!--</li>-->
-    <!--</router-link>-->
     <router-link v-for="(item,index) in navList" :key="index" :to="item.url">
       <li class="footer-item" :class="[item.className,{cur:item.navType==curFooterNavType}]">
         <span></span>
