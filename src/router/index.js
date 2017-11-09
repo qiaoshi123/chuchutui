@@ -4,6 +4,7 @@ import Home from '@/views/home'
 import Category from '@/views/category'
 import VipGuide from '@/views/vipGuide'
 import OrderCenter from '@/views/orderCenter'
+import HighBuy from  '@/views/highBuy'
 Vue.use(Router);
 
 var router=new Router({
@@ -30,6 +31,12 @@ var router=new Router({
       path: '/orderCenter',
       name: 'orderCenter',
       component: OrderCenter,
+      meta: { navShow: true, cname: '一级页面' }
+    },
+    {
+      path: '/highBuy',
+      name: 'highBuy',
+      component: HighBuy,
       meta: { navShow: true, cname: '一级页面' }
     },
   ]

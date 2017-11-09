@@ -3,7 +3,7 @@
       <publicBanner></publicBanner>
       <broadcast></broadcast>
       <ul class="home-motive">
-        <li>
+        <li @click="goto">
           <img src="../asset/image/motive1.png" alt="">
         </li>
         <li>
@@ -70,6 +70,11 @@
   import productList from  '../components/common/productList.vue'
   export default{
     name:'home',
-    components:{publicBanner,broadcast,productList}
+    components:{publicBanner,broadcast,productList},
+    methods:{
+      goto(){
+        this.$router.push({ path: '/highBuy' })
+      }
+    }
   }
 </script>
